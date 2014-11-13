@@ -50,7 +50,6 @@ body {
 
 .throwing {
 	background: url("../images/ryu-throwing-hadouken.png");
-	display: block;
 }
 
 .hadouken, .ready, .still, .throwing {
