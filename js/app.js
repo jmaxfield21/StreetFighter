@@ -18,10 +18,24 @@ $(document).ready( function() {
 				    $(this).css('left', '-200px');
 	  			}
 			);
-		})
+	})
 	.mouseup( function() {
 		$('.throwing').hide();
 		$('.ready').show();
+	});
+
+	$(this).keydown( function(event) {
+		if ( event.keyCode == 88 ) {
+			$('.still').hide();
+			$('.ready').hide();
+			$('.cool').show();
+		}
+	})
+	.keyup( function(event) {
+		if ( event.keyCode == 88 ) {
+			$('.cool').hide();
+			$('.still').show();
+		}
 	});
 });
 
