@@ -1,6 +1,21 @@
 $(document).ready( function() {
 	intro();
+	animation();
 
+});
+
+function intro() {
+	$('#theme')[0].volume = 0.4;
+	$('#theme')[0].load();
+	$('#theme')[0].play();
+	$('.logo').delay(900).fadeIn(3500, function() {
+		$(this).fadeOut(1000, function() {
+			$('.how-to').fadeIn(1500);
+		});
+	});
+}
+
+function animation() {
 	$('.ryu').mouseenter( function() {
 		$('.still').hide();
 		$('.ready').show();
@@ -43,17 +58,6 @@ $(document).ready( function() {
 			$('.cool').hide();
 			$('.still').show();
 		}
-	});
-});
-
-function intro() {
-	$('#theme')[0].volume = 0.4;
-	$('#theme')[0].load();
-	$('#theme')[0].play();
-	$('.logo').delay(900).fadeIn(3500, function() {
-		$(this).fadeOut(1000, function() {
-			$('.how-to').fadeIn(1500);
-		});
 	});
 }
 
