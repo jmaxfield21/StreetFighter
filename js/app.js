@@ -10,6 +10,7 @@ $(document).ready( function() {
 	.mousedown( function() {
 		playHadouken();
 		$('.ready').hide();
+		$('.still').hide();
 		$('.throwing').show();
 		$('.hadouken').finish().show()
 			.animate( {'left': '300px'}, 500,
@@ -26,8 +27,12 @@ $(document).ready( function() {
 
 	$(this).keydown( function(event) {
 		if ( event.keyCode == 88 ) {
-			$('.still').hide();
-			$('.ready').hide();
+			if ( $('.still').show() ) {
+				$('.still').hide();
+			}
+			if ( $('.ready').show() ) {
+				$('.ready').hide();
+			}
 			$('.cool').show();
 		}
 	})
