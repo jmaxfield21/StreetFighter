@@ -1,4 +1,6 @@
 $(document).ready( function() {
+	intro();
+
 	$('.ryu').mouseenter( function() {
 		$('.still').hide();
 		$('.ready').show();
@@ -44,7 +46,18 @@ $(document).ready( function() {
 	});
 });
 
-function playHadouken () {
+function intro() {
+	$('#theme')[0].volume = 0.4;
+	$('#theme')[0].load();
+	$('#theme')[0].play();
+	$('.logo').delay(900).fadeIn(3500, function() {
+		$(this).fadeOut(1000, function() {
+			$('.how-to').fadeIn(1500);
+		});
+	});
+}
+
+function playHadouken() {
   $('#hadouken-sound')[0].volume = 0.5;
   $('#hadouken-sound')[0].load();
   $('#hadouken-sound')[0].play();

@@ -1,5 +1,6 @@
 body {
 	background-color: #000000;
+	font-family: 'Rock Salt', cursive;
 }
 
 .wrapper {	
@@ -54,4 +55,30 @@ body {
 
 .hadouken, .ready, .still, .throwing {
   background-repeat: no-repeat;
+}
+
+.text {
+	position: absolute;
+	left: 650px;
+	height: 425px;
+	width: 600px;
+	padding-top: 75px;
+}
+
+.logo {
+	background: url("../images/Logo.jpg") no-repeat;
+	background-size: 100%;
+	position: relative;
+	vertical-align: middle;
+	height: inherit;
+	display: none;
+}
+
+.how-to {
+	display: none;
+	font-size: 1.5em;
+	text-transform: uppercase;
+	line-height: 2em;
+	letter-spacing: 0.25em;
+	padding-bottom: 100px;
 }
